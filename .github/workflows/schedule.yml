@@ -1,0 +1,15 @@
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+  
+jobs:
+  build-it-image:
+    name: Build IT image
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    timeout-minutes: 20
+    steps:
+      - name: Build IT image
+        run: echo "hello"
+     
